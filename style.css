@@ -6,6 +6,10 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+
+}
+a{
+    color: #fff;
 }
 html{
     scroll-behavior: smooth;
@@ -214,7 +218,7 @@ section .title::after{
     background: none;
 }
 
-/* about section styling */
+/*--------------- about section styling---------- */
 .about .title::after{
     content: "who i am";
 }
@@ -258,50 +262,118 @@ section .title::after{
     background: none;
 }
 
-/* projects section styling */
-.projects, .Projects{
-    color:#fff;
-    background: #111;
-}
-.projects .title::before,
-.Projects .title::before{
-    background: #fff;
-}
-.projects .title::after,
+/*------ projects section styling---------- */
+
+    .project-img{
+        width: 470px;
+        height: 300px;
+    }
+    .projects, .Projects{
+        color:#fff;
+        background: #111;
+    }
+    .projects .title::before,
+    .Projects .title::before{
+        background: #fff;
+    }
+    .projects .title::after,
+    .Projects .title::after{
+        background: #111;
+        content: "Projects Name";
+    }
+    .projects .serv-content .card{
+        width: calc(33% - 20px);
+        background: #222;
+        text-align: center;
+        border-radius: 6px;
+        padding: 50px 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .projects .serv-content .card:hover{
+        background: crimson;
+    }
+    .projects .serv-content .card .box{
+        transition: all 0.3s ease;
+    }
+    .projects .serv-content .card:hover .box{
+        transform: scale(1.05);
+    }
+    .projects .serv-content .card i{
+        font-size: 50px;
+        color: crimson;
+        transition: color 0.3s ease;
+    }
+    .projects .serv-content .card:hover i{
+        color: #fff;
+    }
+    .projects .serv-content .card .text{
+        font-size: 25px;
+        font-weight: 500;
+        margin: 10px 0 7px 0;
+    }
+
+/*--------- Projects section styling--------- */
 .Projects .title::after{
-    background: #111;
-    content: "Projects Name";
+    content: "who with me";
 }
-.projects .serv-content .card{
-    width: calc(33% - 20px);
+.Projects .carousel .card{
     background: #222;
-    text-align: center;
     border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
     transition: all 0.3s ease;
 }
-.projects .serv-content .card:hover{
+.Projects .carousel .card:hover{
     background: crimson;
 }
-.projects .serv-content .card .box{
+.Projects .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
-.projects .serv-content .card:hover .box{
+.Projects .carousel .card:hover .box{
     transform: scale(1.05);
 }
-.projects .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-.projects .serv-content .card:hover i{
-    color: #fff;
-}
-.projects .serv-content .card .text{
+.Projects .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
+.Projects .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.Projects .carousel .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson!important;
 }
 
 /* skills section styling */
@@ -379,68 +451,13 @@ section .title::after{
     width: 70%;
 }
 
-/* Projects section styling */
-.Projects .title::after{
-    content: "who with me";
+.skills-content #logo a img{
+    width: 170px;
+    height: auto;
+    /* background-color: red; */
 }
-.Projects .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.Projects .carousel .card:hover{
-    background: crimson;
-}
-.Projects .carousel .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-.Projects .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.Projects .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.Projects .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid crimson;
-    transition: all 0.3s ease;
-}
-.Projects .carousel .card:hover img{
-    border-color: #fff;
-}
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid crimson!important;
-    transition: all 0.3s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background: crimson!important;
-}
+
+
 
 /* contact section styling */
 .contact .title::after{
@@ -559,6 +576,12 @@ footer span a:hover{
         height: 350px;
         width: 350px;
     }
+
+    .skills-content #logo a img{
+        width: 170px;
+        height: auto;
+        /* background-color: red; */
+    }
 }
 
 @media (max-width: 991px) {
@@ -629,16 +652,19 @@ footer span a:hover{
         width: 100%;
         margin-bottom: 35px;
     }
+    .skills-content #logo a img{
+        width: 170px;
+        height: auto;
+        /* background-color: red; */
+    }
 }
 
 @media (max-width: 690px) {
     #logo{
-       
-        
-                display: grid;
-                grid-template-columns: repeat(2,1fr);
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                gap:15px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+        gap:15px;
          
     }
     .max-width{
@@ -656,6 +682,13 @@ footer span a:hover{
     .projects .serv-content .card{
         width: 100%;
     }
+    .skills-content #logo a img{
+        width: 170px;
+        height: auto;
+        /* background-color: red; */
+    }
+
+    
 }
 
 @media (max-width: 500px) {
@@ -687,11 +720,16 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+    .skills-content #logo a img{
+        width: 170px;
+        height: auto;
+        /* background-color: red; */
+    }
 }
 
 .left1{
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .proj{
@@ -715,6 +753,7 @@ footer span a:hover{
     background:crimson;
     border: 2px solid crimson;
     /* transition: all 0.3s ease; */
+    
 }
 .btn:hover{
     color: white;
@@ -724,15 +763,185 @@ footer span a:hover{
 #logo{
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 90px
+    grid-template-columns: repeat(3,1fr);
+    gap: 150px;
+    margin: auto;
    
 }
 @media all and (min-width: 481px) and (max-width:761px){
+    .about .about-content .left img{
+        height: 220px;
+        width: 220px;
+        object-fit: cover;
+        border-radius: 6px;
+    } 
+
+    .home .home-content .text-1{
+        font-size: 16px;
+    }
+    .home .home-content .text-2{
+        font-size: 45px;
+        font-weight: 600;
+        margin-left: -3px;
+    }
+    .home .home-content .text-3{
+        font-size: 22px;
+        margin: 5px 0;
+    }
+
     #logo{
         display: grid;
         grid-template-columns: repeat(2,1fr);
       
         gap:50px;
+    }
+
+    .left1{
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    /* skills section styling */
+    .skills-content #logo a img{
+        width: 130px;
+        height: auto;
+        /* background-color: red; */
+    }
+
+    .project-img{
+        width: 350px;
+
+    }
+
+    .left1{
+        font-size: 12px;
+    }
+
+    section .title::after{
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        font-size: 16px;
+        color: crimson;
+        padding: 0 5px;
+        background: #fff;
+        transform: translateX(-50%); 
+    }
+    
+
+}
+
+@media all and (min-width: 320px) and (max-width:480px){
+    .about .about-content .left img{
+        height: 220px;
+        width: 220px;
+        object-fit: cover;
+        border-radius: 6px;
+    }    
+
+    .home .home-content .text-1{
+        font-size: 12px;
+    }
+    .home .home-content .text-2{
+        font-size: 35px;
+        font-weight: 600;
+        margin-left: -3px;
+    }
+    .home .home-content .text-3{
+        font-size: 18px;
+        margin: 5px 0;
+    }
+    
+    
+    /* skills section styling */
+     #logo{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+      
+        gap:50px;
+    }
+
+    
+    .left1{
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+     .skills-content #logo a img{
+        width: 110px;
+        height: auto;
+        /* background-color: red; */
+    }
+
+    .project-img{
+        width: 320px;
+        height: auto;
+
+    }
+
+    .left1{
+        font-size: 10px;
+    }
+
+    section .title::after{
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        font-size: 16px;
+        color: crimson;
+        padding: 0 5px;
+        background: #fff;
+        transform: translateX(-50%); 
+    }
+}
+
+
+@media all and (min-width: 768px) and (max-width:1180px){
+
+
+    #logo{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+      
+        gap:70px;
+    }
+
+    .left1{
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    /* skills section styling */
+    .skills-content #logo a img{
+        width: 150px;
+        height: auto;
+        /* background-color: red; */
+    }
+
+    .project-img{
+        width: 600px;
+        height: auto;
+
+    }
+
+    .left1{
+        font-size: 18px;
+    }
+
+    section .title::after{
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        font-size: 18px;
+        color: crimson;
+        padding: 0 5px;
+        background: #fff;
+        transform: translateX(-50%); 
     }
 }
