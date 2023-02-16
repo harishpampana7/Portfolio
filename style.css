@@ -376,6 +376,12 @@ section .title::after{
     background: crimson!important;
 }
 
+.proj img{
+    border-radius: 20px;
+    /* box-shadow: crimson 0px 2px 4px 0px, crimson 0px 2px 16px 8px; */
+    
+}
+
 /* skills section styling */
 
 .skills .title::after{
@@ -737,6 +743,12 @@ footer span a:hover{
 }
 .pa{
     padding-bottom: 2%;
+}
+
+.proj img{
+    border-radius: 20px;
+    box-shadow: crimson 0px 2px 4px 0px, crimson 0px 2px 16px 8px;
+    
 }
 
 .btn{
